@@ -1,12 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 *,
 *::after,
 *::before {
@@ -31,33 +22,28 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
-    ),
-    url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.logo:hover {
+.header__logo:hover {
   animation: rotateCompletely 1s ease-out;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -72,7 +58,7 @@ body {
   backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -81,7 +67,7 @@ body {
   animation-duration: 1s;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -113,7 +99,7 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -131,7 +117,7 @@ body {
   transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -140,46 +126,56 @@ body {
   opacity: 0;
 }
 
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
     transform: translateX(-10rem);
   }
-
   80% {
     transform: translateX(1rem);
   }
-
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
-
   80% {
     transform: translateX(-1rem);
   }
-
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes rotateCompletely {
+  0% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 
-@keyframes rotateCompletely {
-  0% {
-    opacity: 0;
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-    opacity: 1;
-  }
-}
+/*# sourceMappingURL=style.css.map */

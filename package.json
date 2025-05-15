@@ -1,0 +1,23 @@
+{
+  "name": "natourssass",
+  "version": "1.0.0",
+  "description": "working with css preprocessor - Sass with SCSS syntax",
+  "homepage": "https://github.com/ngrajan/UIAdvanced#readme",
+  "bugs": {
+    "url": "https://github.com/ngrajan/UIAdvanced/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngrajan/UIAdvanced.git"
+  },
+  "license": "ISC",
+  "author": "Dev_G",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "devDependencies": {
+    "sass": "^1.88.0"
+  }
+}
